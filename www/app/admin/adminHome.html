@@ -1,0 +1,58 @@
+<ion-view view-title="Cab Service">
+    <ion-nav-bar class="bar-stable">
+    </ion-nav-bar>
+      <ion-nav-buttons side="left">
+        <div class="button button-icon button-clear ion-android-add" ng-click="showActionSheet()"></div>
+   </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <div class="button button-icon button-clear ion-ios-contact-outline" ng-click="logout()"></div>
+   </ion-nav-buttons>
+    <ion-content>
+            <div class="list list-inset">
+           <div class="item1" style="text-align: center;"><h5 class="h5"> Today , {{today | date: "dd MM"}}</h5></div>
+          <div>
+        <div class="row">
+            <div class="col">
+                <div class=" list card custom-card" ng-click="showBookCabsModal()"><div class="images">
+                    <img ng-src="img/bookCab_a.png"></div>
+                      <div><h4 class="icon-heading"><br>Booked Late <br> Night Cab</h4></div>
+                </div>
+            </div>
+            <div class="col">
+                 <div class=" list card custom-card"  ng-click="routeDetails()">
+                    <div class="images"><img ng-src="img/routeChange_a.png"></div>
+                     <div><h4 class="icon-heading"><br>Route <br> Details </h4></div>
+                </div>
+            </div>
+
+        </div>
+
+          <div class="row">
+            <div class="col">
+                <div class=" list card custom-card" ng-click="showMorningCabsModal()">
+                    <div class="images"><img ng-src="img/cancelMorning_a.png"></div>
+                    <div><h4 class="icon-heading"><br>Cancelled <br> Morning Cabs</h4></div>
+                </div>
+            </div>
+            <div class="col">
+                 <div class="list card custom-card" ng-click="showNightCabsModal()">
+                     <div class="images"><img ng-src="img/cancelNight_a.png"></div>
+                     <div><h4 class="icon-heading"><br>Cancelled <br> Night Cabs</h4></div>
+                </div>
+            </div>
+
+        </div>
+
+    </ion-content>
+    <script id="templates/popover.html" type="text/ng-template">
+      <ion-popover-view>
+        <ion-content>
+          <div class="list" ng-repeat="item in notificationList" style="margin-bottom: 2px;">
+            <div class="item item-input" style="background-color: rgba(69, 149, 230, 0.61);height: 30px;" href="" target="_blank">
+                <p style="color:black;font-family:Comic Sans MS;font-style:bold;">Night Cab - {{item.emp_name}} - {{item.date | date: "dd-MM-yyyy"}}</p>
+            </div>
+          </div>
+        </ion-content>
+      </ion-popover-view>
+    </script>
+</ion-view>

@@ -1,0 +1,31 @@
+<ion-modal-view class="product edit create" style="text-align:center;" >
+      <ion-header-bar class="bar-positive fix-buttons">
+          <a class="button" ng-click="closeRegisterModal()">Cancel</a>
+          <h1 class="title">Register</h1>
+         <a class="button"  ng-if=" signUp.name != null && signUp.address != null && signUp.mobile != null && signUp.email != null && signUp.mobile.length ==10 && !invalidFlag" ng-click="signUpUser()">Save</a>
+      </ion-header-bar>
+      <ion-content has-bouncing="true"> 
+       <ion-scroll>
+           <div class="list" >
+               <form name="form">
+            <label class="item item-input item-floating-label paddingClass">
+                <span class="input-label" style="text-align: left;">Full Name</span>
+                <input type="text" ng-model="signUp.name" ng-Required="true" placeholder="Full Name">
+            </label>
+            <label class="item item-input item-floating-label paddingClass">
+                <span class="input-label" style="text-align: left;">Pick Up Address</span>
+                <input type="text" ng-model="signUp.address" ng-Required="true" placeholder="Pick Up Address">
+            </label>
+            <label class="item item-input item-floating-label paddingClass">
+                <span class="input-label" style="text-align: left;" >Mobile</span>
+                <input type="text" ng-model="signUp.mobile" ng-Required="true" maxLength="10" placeholder="Mobile" number-only="number-only">
+            </label>
+            <label class="item item-input item-floating-label paddingClass" ng-class="invalidFlag ? 'invalidClass' : ''">
+                <span class="input-label" style="text-align:left;" >CES Email</span>
+                <input type="email" ng-model="signUp.email" id="email" name="email" ng-Required="true" ng-pattern="regex" placeholder="example@cesltd.com" >
+                   </label>
+               </form>
+        </div>
+    </ion-scroll>
+      </ion-content>
+</ion-modal-view>

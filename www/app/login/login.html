@@ -1,0 +1,25 @@
+<ion-view view-title="Cab Service">
+    <ion-content ng-controller="loginController" ng-class="timeOfDay">
+        <div class="row row-center" >
+            <div class="col text-center" style="margin: 60px auto;margin-top: 119px">
+                <form method="get">
+                    <div class="list card login-list">
+                        <label class="item item-input">
+                            <label class="item-icon-left"><i class="icon ion-person"></i></label>
+                            <input style="color:white;" type="text" placeholder="Email :  example@cesltd.com" ng-model = "email">
+                        </label>
+                        <label class="item item-input">
+                            <label  class="item-icon-left"><i class="icon ion-locked"></i></label>
+                            <input style="color:white;" type="password" placeholder="Password" ng-model = "pass">
+                        </label>
+                        <button class="button button-block button-positive login-buttons" ng-click="loginValidate()">LOGIN</button>         
+                </form>
+                    <br>
+                    <br>
+                    <button class="button icon-left ion-ios-paper-outline button-positive login-buttons" ng-click="showRegisterModal()">SignUp</button>
+            <br>
+            <h4><a style="color:white;" ng-click="forgetPassword()">Forget Password ?</a></h4> 
+            </div>
+        </div>        
+    </ion-content>
+</ion-view>

@@ -1,0 +1,52 @@
+<ion-modal-view class="product edit create" style="height:38%;
+   text-align:center;" >
+      <ion-header-bar class="bar-positive fix-buttons">
+         <a class="button" ng-click="closeAddRouteModal()">Cancel</a>
+         <h1 class="title">Route Details</h1>
+       <!--  <a class="button">Save</a>-->
+      </ion-header-bar>
+      <ion-content has-bouncing="true">
+     
+        <ion-list>
+            <ion-item class="row">
+                <h2 style="margin-top: 11px;" class="col">Route Number : {{routeNo}}</h2>
+                <div class="col" style="text-align: right;">
+                    <button class="button button-assertive icon ion-android-add" ng-click="addMember()">
+                        &nbsp;Add Member
+                    </button>
+                </div>
+            </ion-item>
+        </ion-list>
+          
+        <div  class="item item-input-inset custom-list" ng-if = "addMemberFlag">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search" ng-model = "data.employee" placeholder= "Search"  ng-change="searchNames()">
+            </label>
+            <button class="button button-clear" ng-click="clearSearch()">
+                Clear
+            </button>
+        </div>
+          
+          <div>
+           <div class="list list_typeahd" ng-show="flag" >
+               <li class="item" ng-repeat="item in emp" ng-click="addNewEmployee(item)"><p>{{item.emp_name}}</p><p>{{item.pick_up}}</p></li>
+            </div>
+             <!-- <div class="list custom-list" ng-if="selected">
+                  <ion-item class="row"><h2 class="col">Name</h2><h2 class="col">Address</h2></ion-item>
+               <li class="item row" ng-repeat="item in listNames" ><p class="col">{{item.routeMembers}}</p></li>
+            </div>   -->  
+              <div class="list custom-list">
+                  <ion-item class="row"><h2 class="col">Name</h2><h2 class="col">Address</h2></ion-item>
+               <li class="item row" ng-repeat="item in listNames" ng-if="item.emp_name!='admin'" ><p class="col">{{item.emp_name}}</p><p class="col">{{item.pick_up}}</p></li>
+            </div>
+              
+          </div>      
+          
+     
+          
+          
+          
+            
+      </ion-content>
+</ion-modal-view>

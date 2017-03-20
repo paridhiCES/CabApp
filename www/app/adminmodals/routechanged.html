@@ -1,0 +1,31 @@
+<ion-modal-view class="product edit create" style="height:38%;
+   text-align:center;" >
+      <ion-header-bar class="bar-positive fix-buttons">
+         <h1 class="title">Changed Routes</h1>
+          <a class="button" ng-click="closeChangedRouteModal()">Cancel</a>
+      </ion-header-bar>
+      <ion-content has-bouncing="true"> 
+          
+           <ion-list class="list">
+               <ion-item class="item head-item" >
+                   <div class="row" >
+                       <div class="col">
+                           <span style="font-weight: bold;"> Name </span>
+                       </div>
+                       <div class="col">
+                           <span style="font-weight: bold;"> Address </span>
+                       </div>
+                   </div>
+               </ion-item>
+               <ion-item class="item" ng-repeat="item in routeChanges"><div class="row" >
+                       <div class="col">
+                           {{item.emp_name}}
+                       </div>
+                       <div class="col">
+                           {{item.pick_up}}
+                       </div>
+                   </div> 
+               </ion-item>   
+          </ion-list>
+      </ion-content>
+</ion-modal-view>

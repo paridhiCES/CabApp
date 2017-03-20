@@ -1,0 +1,22 @@
+<ion-modal-view class="product edit create" style="height:38%;
+   text-align:center;" >
+      <ion-header-bar class="bar-positive fix-buttons">
+         <a class="button" ng-click="closeRouteModal()">Cancel</a>
+         <h1 class="title">Route Details</h1>
+      </ion-header-bar>
+       
+      <ion-content has-bouncing="true">
+          <div class="bar bar-subheader row">
+                <h2 class="title">Route Members</h2>
+          </div>
+           
+          <div style="margin-top:60px;">
+                <ion-list>
+                    <ion-item class="row"><h2 style="margin-top: 4px;text-align:center;" class="col">Name</h2>
+                    <h2 style="margin-top: 4px;text-align:center;" class="col">Address</h2></ion-item>
+                    <ion-item class="row" ng-repeat="item in routeMembers" ng-if="item.emp_name!='admin'"><h4 style="margin-top: 4px;" class="col">{{item.emp_name}}</h4>
+                    <h4 style="margin-top: 4px;" class="col">{{item.pick_up}}</h4></ion-item>
+                </ion-list>
+          </div>
+     </ion-content>
+</ion-modal-view>

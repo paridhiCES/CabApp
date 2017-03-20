@@ -1,0 +1,33 @@
+<ion-modal-view class="product edit create" style="height:38%;
+   text-align:center;" >
+
+      <ion-header-bar class="bar-positive fix-buttons">
+         <a class="button" ng-click="closeModal()">Cancel</a>
+         <h1 class="title">Add New Employee</h1>
+         <a class="button" ng-if="model.mob != null && model.name != null && model.pickup != null && model.route != null && model.mob.length ==10" ng-click="insertEmp()">Save</a>
+      </ion-header-bar>
+      <ion-content has-bouncing="true">
+         <div class="row" style="margin-top: 12%;">
+            <div class="col">
+               <label class="item item-input large modal-ta"  ng-class="{'no-padding-top': !data.editItem}">
+                    <input type="text" ng-model="model.name" placeholder="Name"/>
+               </label>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
+               <label class="item item-input large modal-ta"><input type="text" ng-Required="true"  maxLength="10" placeholder="Mobile" ng-model="model.mob" number-only="number-only"/></label>
+            </div>
+         </div>
+        <div class="row">
+            <div class="col">
+               <label class="item item-input large modal-ta"><input type="text" placeholder="Pick Up" ng-model="model.pickup"></label>
+            </div>
+         </div>
+        <div class="row">
+            <div class="col">
+               <label class="item item-input large modal-ta"><input type="text" placeholder="Route Number" maxLength="2" ng-model="model.route" number-only="number-only"></label>
+            </div>
+         </div>
+      </ion-content>
+</ion-modal-view>

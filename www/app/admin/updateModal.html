@@ -1,0 +1,55 @@
+<ion-modal-view class="product edit create" style="height:38%;
+   text-align:center;" >
+
+      <ion-header-bar class="bar-positive fix-buttons">
+         <a class="button" ng-click="closeUpdateModal()">Cancel</a>
+         <h1 class="title">Update Employee</h1>
+         <a class="button" ng-if="model1.mob !=null && model1.name != '' && model1.pickup != '' && model1.route >0" ng-click="updateEmp()">Save</a>
+      </ion-header-bar>
+      <ion-content has-bouncing="true">
+         <div class="row rowTop">
+            <div class="col">
+               <label class="item item-input large modal-ta"  ng-class="{'no-padding-top': !data.editItem}">
+                    <input type="text" ng-model="model1.name" placeholder="Name" ng-change="search()" ng-disabled="filled"/>
+                    <span class="item-note" ng-if="flag">
+                        Name
+                    </span>
+               </label>
+            </div>
+         </div>
+          
+           <ul class="list list_typeahd" ng-show="show" id="scrollArea">
+               <ion-scroll direction="xy" style="width: 302px; height: 120px">
+                        <li class="item" ng-repeat="item in arr" ng-click="selectedName(item)"><p>{{item.emp_name}}</p><p class="email-property">{{item.emp_email}}</p></li>
+                </ion-scroll>
+           </ul>
+          
+         <div class="row" ng-if="flag">
+            <div class="col">
+               <label class="item item-input large modal-ta"><input type="text" ng-minlength="10" ng-Required="true"  maxLength="10" placeholder="Mobile" ng-model="model1.mob" number-only="number-only"/>
+                 <span class="item-note">
+                   Mobile
+                    </span>
+                </label>
+            </div>
+         </div>
+        <div class="row" ng-if="flag ">
+            <div class="col">
+               <label class="item item-input large modal-ta"><input type="text" placeholder="Pick Up" ng-model="model1.pickup">
+                <span class="item-note">
+                  Route Address
+                </span> 
+             </label>
+            </div>
+         </div>
+        <div class="row" ng-if="flag ">
+            <div class="col">
+               <label class="item item-input large modal-ta"><input type="text" placeholder="Route Number"  maxLength="2" ng-model="model1.route" number-only="number-only">
+                  <span class="item-note">
+                  Route Number
+                </span>
+                </label>
+            </div>
+         </div>
+      </ion-content>
+</ion-modal-view>

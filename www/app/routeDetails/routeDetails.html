@@ -1,0 +1,38 @@
+<ion-view view-title="Cab Service">
+    <ion-nav-bar class="bar-stable">
+    </ion-nav-bar>
+      <ion-nav-buttons side="left">
+          <div class="button button-icon button-clear ion-android-arrow-back" ng-click="back()"></div>
+   </ion-nav-buttons>   
+    <ion-nav-buttons side="right">
+        <div class="button button-icon button-clear ion-ios-contact-outline" ng-click="logout()"></div>
+   </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <ion-item class="row">
+                <h2 style="margin-top: 11px;" class="col">List of Route</h2>
+                <div class="col" style="text-align: right;">
+                    <button class="button button-assertive icon ion-android-add" ng-click="addRoute()">
+                        &nbsp;Create Route
+                    </button>
+                </div>
+            </ion-item>
+        </ion-list>
+        <div class="list_new" >
+          <div class="item item-input-inset" ng-show="showRouteDiv == true">
+            <label class="item-input-wrapper">
+              <input type="text" id="routeNumber" ng-model = "routeNumber" number-only="number-only" maxLength="2" placeholder="Route Number" >
+            </label>
+            <button class="button button-small" ng-click="routeNumberAssign(routeNumber)">
+                Submit
+            </button>
+          </div>
+            <div class="list_new">
+                <ion-list>
+                    <ion-item class="row ion-ios-trash" ng-repeat="item in routeList" ng-click="showAddMemberModal(item.route_no)"><h2 style="margin-top: 4px;" class="col">Route Number : {{item.route_no}}</h2>
+                    </ion-item>
+                </ion-list>        
+            </div>       
+        </div>
+    </ion-content>
+</ion-view>

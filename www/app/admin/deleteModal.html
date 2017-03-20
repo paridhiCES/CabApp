@@ -1,0 +1,19 @@
+<ion-modal-view class="product edit create" style="height:38%;
+   text-align:center;" >
+
+      <ion-header-bar class="bar-positive fix-buttons">
+           <button class="button button-icon icon ion-ios-minus-outline"
+          ng-click="data.showDelete = !data.showDelete"></button>
+         <h1 class="title">Delete Employee</h1>
+          <a class="button" ng-click="closedeleteModal()">Cancel</a>
+      </ion-header-bar>
+      <ion-content has-bouncing="true">      
+           <ion-list class="list" show-delete="data.showDelete">
+               <ion-item class="item" ng-repeat="item in allUsersData" ng-click="onItemDelete(item)" ng-if="item.emp_name!='admin'"><p>{{item.emp_name}}</p><p class="email-property">{{item.emp_email}}</p>
+           <ion-delete-button class="icon ion-minus-circled" style="background-color:white" ng-click="onItemDelete(item)">
+          </ion-delete-button>
+               </ion-item>   
+               
+           </ion-list>
+      </ion-content>
+</ion-modal-view>

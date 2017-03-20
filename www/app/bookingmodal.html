@@ -1,0 +1,38 @@
+<ion-modal-view class="product edit create" style="height:38%;
+   text-align:center;" >
+   <form name="itemEdit" novalidate>
+      <ion-header-bar class="bar-positive fix-buttons">
+         <a class="button" ng-click="closeModal()">Cancel</a>
+         <h1 class="title">Booking Details</h1>
+         <a class="button" ng-click="saveModal()" ng-if="(date != null)">Save</a>
+      </ion-header-bar>
+      <ion-content has-bouncing="true">
+         <div class="row rowTop" >                            
+             <div class="col" ng-show="bookingTime > todayDate">
+                 <p ng-model="paraToday" ng-value="'A'" id="paraToday">
+                     {{todayDate | date:'dd/MM/yyyy'}}
+                 </p>
+             </div>
+             <div class="col" ng-show="bookingTime < todayDate" >
+                 <p ng-model="paraTommorow" ng-value="'B'" id="paraTommorow" >
+                     {{tommorrow}}
+                 </p>
+             </div>
+            
+         </div>
+         <div class="row">
+            <div class="col col-75">
+               <label class="item item-input large modal-ta"><input type="text" placeholder="HH:MM" ng-disabled="true" ng-model="bookingTime" ng-click="timePickerCallback()"></label>
+            </div>
+            <div class="col">
+               <ionic-timepicker input-obj="timePickerObject">
+                  <button class="time button-positive overflowShow">
+                     Time 
+                     <standard-time-meridian etime='timePickerObject.inputEpochTime'></standard-time-meridian>
+                  </button>
+               </ionic-timepicker>
+            </div>
+         </div>
+      </ion-content>
+   </form>
+</ion-modal-view>

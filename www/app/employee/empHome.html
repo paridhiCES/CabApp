@@ -1,0 +1,143 @@
+<ion-view view-title="Cab Service">
+   <ion-nav-bar class="bar-stable">
+   </ion-nav-bar>
+    <ion-nav-buttons side="right">
+        <div class="button button-icon button-clear ion-ios-contact-outline" ng-click="logout()"></div>
+   </ion-nav-buttons>
+   <ion-content>
+       <div class="list list-inset">
+           <div class="item1" style="text-align: center;"><h5 class="h5"> Today , {{todayDate | date: "dd MMM"}}</h5></div>
+       
+  <!--<div class="circle" style="text-align:center;margin-top: 21%">
+    <div class="outerCircle">
+        <div class="upper">
+            <button type="button" class="topLeft" ng-click="nightCab()"><h4>Book Night Cab</h4></button>
+            <button type="button" class="topRight" ng-click="changeRoute()"><h4>Change Address</h4></button>
+        </div>
+        <div class="lower">
+            <button type="button" class="bottomLeft" ng-click=" cancelMorningCab()"><h4>Cancel Morning Cab</h4></button>
+            <button type="button" class="bottomRight" ng-click="cancelNightCab()"><h4>Cancel Night Cab</h4></button>
+            
+        </div>
+        
+             
+    </div>
+        </div> -->     
+           
+<div>
+            
+<!--    <div class = "row icon-row align">
+
+      <div class = "col text-center col-50" ng-click="nightCab()">
+        <div class="imgg"><img ng-src="img/bookCab.png"></div>
+        <span class="pStyle"<h5>Book Late Night Cabs</h5></span>
+        <div class="button button-dark">Book Cab 3</div>
+      </div>
+
+
+
+      <div class = "col text-center col-50" ng-click="changeRoute()">
+        <div class="imgg"><img ng-src="img/routeChange1.png"></div>
+        <span class="pStyle"<h5> Change Route</h5></span>
+        <!-- <div class="button button-dark">Book Cab 3</div>  
+      </div>
+
+    </div>
+
+
+    <div class = "row icon-row align">
+
+          <div class = "col text-center col-50" ng-click=" cancelMorningCab()">
+            <div class="imgg"><img ng-src="img/cancelMorning1.png"></div>
+            <span class="pStyle"<h5>Cancel Morning Cab</h5></span>
+            <div class="button button-dark">Book Cab 3</div> 
+          </div>
+
+
+
+
+          <div class = "col text-center col-50" ng-click="cancelNightCab()">
+            <div class="imgg"><img ng-src="img/cancelNight.png" style="
+        width: 114%;"></div>
+            <span class="pStyle"<h5>Cancel Night Cab</h5></span>
+            <div class="button button-dark">Book Cab 3</div> 
+          </div>
+
+    </div>
+</div> -->
+           
+    <div class="padding-top-cust">
+        <div class="row">
+            <div class="col">
+                <div class=" list card custom-card" ng-click="nightCab()" >
+                    <div class="images"><img ng-src="img/cab.png"></div>
+                      <div><h4 class="icon-heading"><br>Book Late <br> Night Cab</h4></div>
+                </div>
+            </div>
+            <div class="col">
+                 <div class=" list card custom-card" ng-click="routeDetails()">
+                    <div class="images"><img ng-src="img/route.png"></div>
+                     <div><h4 class="icon-heading"><br>Route <br> Details</h4></div>
+                </div>
+            </div>
+        
+        </div>
+           
+          <div class="row">
+            <div class="col">
+                <div class=" list card custom-card" ng-click=" cancelMorningCab()">
+                    <div class="images"><img ng-src="img/morning.png"></div>
+                    <div><h4 class="icon-heading"><br>Cancel <br> Morning Cab</h4></div>
+                </div>
+            </div>
+            <div class="col">
+                 <div class="list card custom-card" ng-click="cancelNightCab()">
+                     <div class="images"><img ng-src="img/night.png"></div>
+                     <div><h4 class="icon-heading"><br>Cancel <br> Night Cab</h4></div>
+                </div>
+            </div>
+        
+        </div>   
+           
+           
+      <!-- <div class="list1">
+          <div class="item item-button-right item item-avatar" ng-click="nightCab()">
+            <img src="img/cab1.jpg">
+              <div style="padding-left: 13%;">
+              <h3 class="h3color">Book Late Night Cab</h3>
+              <p>If you need cab after 10:30PM</p>
+              </div>
+          </div>
+           <div class="item item-button-right item item-avatar" ng-click="changeRoute()">
+               <img src="img/cab2.jpg">
+               <div style="padding-left: 13%;">
+               <h3 class="h3color">Change Route</h3>
+                <p>Change Address</p>
+               </div>
+          </div>
+           <div class="item item-button-right item item-avatar" ng-click=" cancelMorningCab()">
+            <img src="img/cab3.jpg">
+               <div style="padding-left: 13%;">
+               <h3 class="h3color">Cancel Morning Cab</h3>
+               <p>Cancel Before 10:00AM</p>
+               </div>
+          </div>
+           <div class="item item-button-right item item-avatar" ng-click="cancelNightCab()">
+           <img src="img/cab4.jpg">
+               <div style="padding-left: 13%;">
+               <h3 class="h3color">Cancel Night Cab</h3>
+                <p>Cancel Before 8PM</p>
+               </div>
+          </div>
+           <a href="tel:+919009426607">
+           <div class="item item-button-right item item-avatar" >
+           <img src="img/cab5.jpg">
+               <div style="padding-left: 13%;">
+               <h3 class="h3color">Contact</h3>
+                <p>Call Admin</p>  
+               </div>
+               </div></a>
+       </div>-->
+    </div>
+   </ion-content>
+</ion-view>
